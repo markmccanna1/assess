@@ -1,0 +1,14 @@
+<h1> Welcome to the event home page... it's where you get intimate with events... </h1>
+
+
+
+<a href="create_event">Click here to create an event</a>
+<a href="events/yours">Click here to view the events you've created</a>
+
+<% if @events %>
+<ul>
+  <% @events.each do |event| %>
+  <li> <a href="/events/<%= event.id %>"> <%= event.name %> </a></li>
+  <% end %>
+</ul>
+<% end %> 

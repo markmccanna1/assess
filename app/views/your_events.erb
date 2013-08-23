@@ -1,0 +1,16 @@
+<h2> <%= @user.first_name %> <%= @user.last_name %></h2>
+<h2> Here are all the events you've created </h2>
+
+
+<% if @your_events %>
+  <ul>
+  <% @your_events.each do |event| %>
+    <li> <a href="/events/<%= event.id %>"> <%= event.name %> </a></li>
+  <% end %>
+  </ul>
+<% end %>
+
+
+<%= erb :create_event %>
+
+
